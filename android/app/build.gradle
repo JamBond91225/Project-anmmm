@@ -1,0 +1,11 @@
+android {
+    namespace = "com.anmmm.madrasa"
+    compileSdk = 34
+    defaultConfig {
+        applicationId = "com.anmmm.madrasa"
+        minSdk = 21
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0.0"
+    }
+}
