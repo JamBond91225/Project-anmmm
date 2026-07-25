@@ -1,0 +1,28 @@
+
+workflows:
+  android-workflow:
+    name: ANMMM APK Fixed
+    max_build_duration: 60
+    instance_type: mac_mini_m2
+    environment:
+      flutter: stable
+    scripts:
+      - name: Fix V1 Embedding Error
+        script: |
+          echo "Deleting old android folder and recreating with V2 embedding..."
+          rm -rf android
+          flutter create . --platforms=android
+      - name: Get packages
+        script: |
+          flutter clean
+          flutter pub get
+      - name: Build APK
+        script: |
+          flutter build apk --release --verbose
+    artifacts:
+      - build/**/outputs/**/*.apk
+      - build/**/outputs/**/mapping.txt
+    publishing:
+      email:
+        recipients:
+          - anmmm151224@gmail.com
