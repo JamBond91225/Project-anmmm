@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "569530042636",
+    "project_id": "anmmm-management",
+    "storage_bucket": "anmmm-management.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569530042636:android:5aba824a0b26473fc56129",
+        "android_client_info": {
+          "package_name": "com.anmmm.madrasa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAz5FMkknAPbt9UjLFVmUgD975bVsbrV2Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
