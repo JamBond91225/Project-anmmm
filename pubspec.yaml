@@ -1,5 +1,5 @@
 
-name: anmmm
+name: ANMMM
 description: Al-Haj Nur Mohammed Model Madrasa - Full Management App ANMMM
 publish_to: 'none'
 version: 1.0.0+1
@@ -13,3 +13,13 @@ flutter:
   uses-material-design: true
   assets:
     - assets/logo.png
+dependencies:
+  flutter:
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.14.2 # <-- এই লাইন Add
+
+flutter_launcher_icons:
+  android: "flutter_launcher_icons"
+  ios: true
+  image_path: "assets/icon/app_icon.png" # <-- তোমার লোগোর পাথ
