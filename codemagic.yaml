@@ -1,4 +1,3 @@
-
 workflows:
   android-workflow:
     name: ANMMM APK Fixed
@@ -12,16 +11,25 @@ workflows:
           echo "Deleting old android folder and recreating with V2 embedding..."
           rm -rf android
           flutter create . --platforms=android
+          
       - name: Get packages
         script: |
           flutter clean
           flutter pub get
+          
+      - name: Generate App Icon  # <-- নতুন Add করলাম
+        script: |
+          echo "Generating new app icon..."
+          dart run flutter_launcher_icons
+          
       - name: Build APK
         script: |
           flutter build apk --release --verbose
+          
     artifacts:
       - build/**/outputs/**/*.apk
       - build/**/outputs/**/mapping.txt
+      
     publishing:
       email:
         recipients:
